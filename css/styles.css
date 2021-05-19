@@ -145,6 +145,24 @@ a {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+/* =======  ======= */
+
+.icon-antena {
+  background-image: url(/images/antenna-optimized.svg);
+}
+
+.icon-clock {
+  background-image: url(/images/clock-optimized.svg);
+}
+
+.icon-diagramma {
+  background-image: url(/images/diagram-optimized.svg);
+}
+
+.icon-astronaut {
+  background-image: url(/images/astronaut-optimized.svg);
+}
+
 /* ======= containers ======= */
 
 .container {
@@ -160,7 +178,6 @@ a {
   padding-bottom: 94px;
 }
 
-/* компенсируем два паддинга*/
 .special-section {
   padding-top: 94px;
 }
@@ -203,9 +220,30 @@ a {
   margin-right: 0;
 }
 
+.mail::before {
+  content: '';
+  margin-right: 10px;
+  display: inline-flex;
+  width: 16px;
+  height: 12px;
+  background-image: url(/images/mail-optimized.svg);
+  /*отцентрировать*/
+}
+
+.phone::before {
+  content: '';
+  margin-right: 10px;
+  display: inline-flex;
+  width: 10px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/images/smartphone-optimized.svg);
+  /*отцентрировать*/
+}
+
 /* ======= studio page ======= */
 
-/*изменить, когда будет фон*/
 .hero-section {
   background: var(--background-dark);
   height: 600px;
@@ -220,6 +258,13 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.hero-background-image {
+  background-image: url(/images/background-img-squooshed.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*потом сделать затенение*/
 }
 
 .hero-title {
@@ -240,6 +285,19 @@ a {
   margin-bottom: 10px;
   text-transform: uppercase;
   color: var(--txt-black);
+}
+
+.studio-list-section::before {
+  display: block;
+  content: '';
+  height: 120px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: var(--backgound-grey);
+  border-radius: 4px;
+  /*отцентровать*/
 }
 
 .studio-list-section-desr {
@@ -332,7 +390,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  /*только при работающем flex-basis*/
   margin-right: -30px;
   margin-bottom: -30px;
 }
@@ -343,11 +400,6 @@ a {
   margin-bottom: 30px;
   flex-basis: calc((100% - 90px) / 3);
 }
-
-/* только если не работает flex-basis
-.portfolio-pics-last {
-  margin-right: 0;
-  */
 
 .portfolio-pic-names-descr {
   border-left: 1px solid var(--borderline);
