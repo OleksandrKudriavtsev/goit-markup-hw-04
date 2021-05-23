@@ -248,7 +248,7 @@ a {
 }
 
 .hero-background-image {
-  background-image: url(/images/background-img-squooshed.jpg);
+  background-image: url(../images/background-img-squooshed.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -260,7 +260,7 @@ a {
 
 .hero-background-image:hover {
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(/images/background-img-squooshed.jpg);
+    url(../images/background-img-squooshed.jpg);
 }
 
 .hero-title {
@@ -290,18 +290,18 @@ a {
 }
 
 .icon-antena::before {
-  background-image: url(/images/icon-antenna.svg);
+  background-image: url(../images/icon-antenna.svg);
 }
 
 .icon-clock::before {
-  background-image: url(/images/icon-clock.svg);
+  background-image: url(../images/icon-clock.svg);
 }
 
 .icon-diagramma::before {
-  background-image: url(/images/icon-diagram.svg);
+  background-image: url(../images/icon-diagram.svg);
 }
 .icon-astronaut::before {
-  background-image: url(/images/icon-astronaut.svg);
+  background-image: url(../images/icon-astronaut.svg);
 }
 
 /*======= studio-photo-section =======*/
@@ -541,7 +541,7 @@ a {
 .footer-heading {
   margin-bottom: 20px;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 1.14;
   text-transform: uppercase;
   color: var(--background-header-n-photo);
 }
