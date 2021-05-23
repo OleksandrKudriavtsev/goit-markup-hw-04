@@ -8,7 +8,10 @@
   --txt-black: #212121;
   --txt-grey: rgba(255, 255, 255, 0.6);
   --borderline: #ececec;
+  --company-border: #afb1b8;
   --blue-btn-hover: #188ce8;
+  --background-img-layer: #c4c4c4;
+  --grey-for-icons: #afb1b8;
 }
 /* ======= basic reset ======= */
 *,
@@ -147,72 +150,6 @@ a {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* ======= icons ======= */
-.mail {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-}
-
-.phone {
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-}
-
-/* ??? не работает ??? :hover*/
-.header-links-grey:hover .mail,
-.header-links-grey:focus .mail,
-.header-links-grey:hover .phone,
-.header-links-grey:focus .phone {
-  fill: var(--txt-blue);
-}
-
-.studio-central-info-item::before {
-  display: block;
-  content: '';
-  width: 270px;
-  height: 120px;
-  border-radius: 4px;
-  margin-bottom: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--backgound-grey);
-}
-
-.icon-antena::before {
-  background-image: url(/images/icon-antenna.svg);
-}
-
-.icon-clock::before {
-  background-image: url(/images/icon-clock.svg);
-}
-
-.icon-diagramma::before {
-  background-image: url(/images/icon-diagram.svg);
-}
-.icon-astronaut::before {
-  background-image: url(/images/icon-astronaut.svg);
-}
-/*=== список ссылок для фото===*/
-
-.list-of-socail-webs {
-  display: flex;
-  justify-content: space-between;
-}
-
-.social-webs-icons {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: green;
-}
-
-.icon-social-web {
-  width: 20px;
-  height: 20px;
-}
-
 /* ======= containers ======= */
 
 .container {
@@ -249,6 +186,27 @@ a {
 
 /* ======= header ======= */
 
+.mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--grey-for-icons);
+}
+
+.phone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--grey-for-icons);
+}
+
+.header-links-grey:hover .mail,
+.header-links-grey:focus .mail,
+.header-links-grey:hover .phone,
+.header-links-grey:focus .phone {
+  fill: var(--txt-blue);
+}
+
 .header-logo-nav {
   display: flex;
   align-items: center;
@@ -271,6 +229,7 @@ a {
 }
 
 /* ======= studio page ======= */
+/* ======= hero-section =======*/
 
 .hero-section {
   background: var(--background-dark);
@@ -291,8 +250,17 @@ a {
 .hero-background-image {
   background-image: url(/images/background-img-squooshed.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  /*потом сделать затенение*/
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-background-image:hover {
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(/images/background-img-squooshed.jpg);
 }
 
 .hero-title {
@@ -306,6 +274,7 @@ a {
   margin-bottom: 30px;
 }
 
+/* ======= studio-list-section ======= */
 .studio-list-section {
   font-weight: 700;
   line-height: 1.14;
@@ -319,6 +288,23 @@ a {
   line-height: 1.71;
   color: var(--txt-header-mail-n-phone-n-phototxt);
 }
+
+.icon-antena::before {
+  background-image: url(/images/icon-antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(/images/icon-clock.svg);
+}
+
+.icon-diagramma::before {
+  background-image: url(/images/icon-diagram.svg);
+}
+.icon-astronaut::before {
+  background-image: url(/images/icon-astronaut.svg);
+}
+
+/*======= studio-photo-section =======*/
 
 .studio-list-section-heading {
   font-weight: 700;
@@ -347,6 +333,20 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
+.studio-central-info-item::before {
+  display: block;
+  content: '';
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--backgound-grey);
+}
+
+/* ======= team-section ======= */
 
 .team-section {
   background-color: var(--backgound-grey);
@@ -384,6 +384,80 @@ a {
   padding: 30px 32px;
 }
 
+.list-of-socail-webs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-of-socail-webs {
+}
+
+.social-webs-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.icon-social-web {
+  width: 20px;
+  height: 20px;
+  fill: var(--grey-for-icons);
+}
+
+.social-webs-link:hover,
+.footer-social-webs-link:hover {
+  background-color: var(--blue-btn-hover);
+}
+
+.social-webs-link:hover .icon-social-web {
+  fill: var(--background-header-n-photo);
+}
+
+/* ======= companies-section ======= */
+
+.companies-link-list {
+  display: flex;
+}
+
+.companies-link-item {
+  margin-right: 30px;
+  border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid var(--company-border);
+}
+
+.companies-link-item:last-child {
+  margin-right: 0;
+}
+
+.company-logo {
+  display: block;
+  padding: 16px 32px;
+}
+
+.companies-link-item:hover {
+  fill: var(--txt-blue);
+  border-color: var(--txt-blue);
+}
+
+.icon-company {
+  width: 106px;
+  height: 60px;
+  fill: var(--grey-for-icons);
+}
+
+.icon-company:hover {
+  fill: var(--txt-blue);
+}
+
+.companies-link-item:hover {
+  fill: var(--txt-blue);
+}
+
 /* ======= portfolio page ======= */
 
 .hidden {
@@ -416,6 +490,11 @@ a {
   flex-basis: calc((100% - 90px) / 3);
 }
 
+.portfolio-pics:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-pic-names-descr {
   border-left: 1px solid var(--borderline);
   border-right: 1px solid var(--borderline);
@@ -439,6 +518,11 @@ a {
 
 /* ======= footer ======= */
 
+.footer-info-div {
+  display: inline-block;
+  margin-right: 70px;
+}
+
 .footer-adress-list {
   display: flex;
   flex-direction: column;
@@ -448,4 +532,40 @@ a {
 
 .footer-adress-list:last-child {
   margin-bottom: 0px;
+}
+
+.footer-socials-div {
+  display: inline-block;
+}
+
+.footer-heading {
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--background-header-n-photo);
+}
+
+.footer-social-webs-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icon-social-web {
+  width: 20px;
+  height: 20px;
+  fill: var(--background-header-n-photo);
+}
+
+.item-of-socail-webs {
+  margin-right: 10px;
+}
+
+.item-of-socail-webs:last-child {
+  margin-right: 0;
 }
